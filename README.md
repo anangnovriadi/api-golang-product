@@ -13,6 +13,10 @@ git clone https://github.com/anangnovriadi/api-golang-product.git
 $ go mod download
 ```
 
+```
+modify .env
+```
+
 ### RUN app
 ```
 $ go run .
