@@ -1,9 +1,23 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"os"
+
+	"github.com/joho/godotenv"
+
+	"github.com/anangnovriadi/api-golang-product/models"
 )
 
 func main() {
-	fmt.Print("Test")
+	err := godotenv.Load(".env")
+
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
+	models.Connect()
+
+	r := Router()
+	r.Run(":" + os.Getenv("PORT"))
 }

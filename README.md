@@ -15,7 +15,7 @@ $ go mod download
 
 ### RUN app
 ```
-$ go run main.go
+$ go run .
 ```
 
 Check with open in the postman http://host:port
